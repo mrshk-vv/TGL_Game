@@ -6,9 +6,9 @@ namespace Lesson1.Models
 {
     public abstract class Person
     {
-        public string Name;
-        public uint HealthPoint;
-        public uint Damage;
-        public double Reload;
+        public string Name { get; set; }
+        public uint HealthPoint { get; set; }
+        public uint Damage { get; set; }
+        public double Reload { get; set; }
     }
 }
