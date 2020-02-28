@@ -8,7 +8,7 @@ namespace Lesson1.Models
     {
         public string Name { get; set; }
         public uint HealthPoint { get; set; }
-        public uint Damage { get; set; }
+        public int Damage { get; set; }
         public int SkillPower { get; set; }
     }
 }

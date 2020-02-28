@@ -8,7 +8,6 @@ namespace Lesson1
 {
     public class Starter
     {
-        IAboutPlayer aboutPlayer;
         Draco draco = new Draco();
         Luco luco = new Luco();
         Paul paul = new Paul();
@@ -37,15 +36,6 @@ namespace Lesson1
         public void StartFight()
         {
             var figthers = SelectFighters();
-            Console.WriteLine(figthers.p1. + " vs " + figthers.p2.Name);
-            //if(p1.SetDamage() > p2.SetDamage())
-            //{
-            //    Notify.Invoke(p1.SetName() + " победил");
-            //}
-            //else
-            //{
-            //    Notify.Invoke(p2.SetName() + " победил");
-            //}
 
         }
     }
