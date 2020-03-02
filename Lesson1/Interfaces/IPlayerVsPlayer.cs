@@ -6,7 +6,8 @@ namespace Lesson1.Interfaces
 {
     public interface IPlayerVsPlayer
     {
-        uint CheckDamage(int p1Damage, int p2Damage, uint p1HealthPoint, uint p2HealthPoint);
+        string WhoWin();
+        int CheckDamage(int p1Damage, int p2Damage);
         bool CheckSkillPower(int p1SkilPower, int p2SkilPower);
     }
 }
