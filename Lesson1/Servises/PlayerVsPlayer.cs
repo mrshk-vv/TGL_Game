@@ -7,17 +7,17 @@ namespace Lesson1.Servises
 {
     public class PlayerVsPlayer : IPlayerVsPlayer
     {
-        public int CheckDamage(int p1Damage, int p2Damage, uint p1HealthPoint, uint p2HealthPoint)
+        public uint CheckDamage(int p1Damage, int p2Damage, uint p1HealthPoint, uint p2HealthPoint)
         {
             if(p1Damage > p2Damage)
             {
                 if(p1Damage > p2HealthPoint)
                 {
-                    return (int)p2HealthPoint;
+                    return p2HealthPoint;
                 }
                 else
                 {
-                    return (int)p2HealthPoint - p1Damage;
+                    return p2HealthPoint - p1Damage;
                 }
                 
             }

@@ -46,7 +46,7 @@ namespace Lesson1.Servises
             }
         }
 
-        public Person GetPlayer()
+        public Person GetPlayer ()
         {
             Random random = new Random();
             int el = random.Next(0, AllPlayers.Count - 1);

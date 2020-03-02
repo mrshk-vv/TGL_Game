@@ -13,7 +13,6 @@ namespace Lesson1
             Starter start = new Starter();
 
             start.Notify += OnNotify;
-            start.StartFight();
         }
 
         private static void OnNotify(string args)
