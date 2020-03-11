@@ -22,6 +22,7 @@ namespace Lesson1.Servises
         {
             Console.WriteLine("Дерутся " + p1.Name + " и " + p2.Name);
             Console.WriteLine("Fight !");
+            Console.WriteLine();
             Console.WriteLine(p1.Name + " : " + "Тикай з села");
             Console.WriteLine(p2.Name + " : " + "К тебе прийду");
             bool checker = true;
@@ -31,25 +32,34 @@ namespace Lesson1.Servises
             {
                 p2.HealthPoint = CheckDamage(p1.Damage, p2.HealthPoint);
                 Console.WriteLine(p2.Name + " - " + p2.Damage + "HP" + ". Осталось HP " + p2.HealthPoint);
-                if(p2.HealthPoint < 0)
+                if(p2.HealthPoint < p1.Damage)
                 {
                     checker = false;
                 }
                 p1.HealthPoint = CheckDamage(p2.Damage, p1.HealthPoint);
                 Console.WriteLine(p1.Name + " - " + p1.Damage + "HP" + ". Осталось HP " + p1.HealthPoint);
-                if (p1.HealthPoint < 0)
+                if (p1.HealthPoint < p2.Damage)
                 {
                     checker = false;
                 }
 
-
             }
             if (p1.HealthPoint <= 0)
             {
+                if(!CheckSkillPower(p1.SkillPower, p2.SkillPower))
+                {
+                    Console.WriteLine(p2.Name + " Fatatity !!!!!!");
+                }
+                Console.WriteLine();
                 return p2.Name + " Победил";
             }
             else
             {
+                if (CheckSkillPower(p1.SkillPower, p2.SkillPower))
+                {
+                    Console.WriteLine(p1.Name + " Fatatity !!!!!!");
+                }
+                Console.WriteLine();
                 return p1.Name + " Победил";
             }
         }
